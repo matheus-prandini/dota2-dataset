@@ -18,9 +18,10 @@ def process_videos(video_list=all_videos):
         os.makedirs('./frames')
 
     for video in video_list:
-        if os.path.exists('./' + video):
+        if os.path.exists("Events/" + video):
             for i in range(1, 11):
-                video_name = './' + video + '/' + video + '_' + str(i) + '.mp4'
+                video_name = "Events/" + video + '/' + video + '_' + str(i) + '.mp4'
+                print(video_name)
                 destination = './frames/' + video + '_'
                 get_frame(video_name, destination)
 
